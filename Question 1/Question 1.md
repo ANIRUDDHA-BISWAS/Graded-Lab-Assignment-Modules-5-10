@@ -64,3 +64,41 @@ else
     echo "Error: Invalid input."
 fi
 
+```
+
+## Explanation of Execution Steps
+
+### Step 1: Grant Execute Permission
+
+The `chmod +x analyze.sh` command is used to give execute permission to the shell script.  
+Without this permission, the script cannot be run directly as a program.
+
+---
+
+### Step 2: Execute Script with a File Argument
+
+When the script is executed with a file name as an argument, it first verifies that the path exists and is a file.  
+It then uses the `wc` command to calculate and display the number of lines, words, and characters in the file.
+
+---
+
+### Step 3: Execute Script with a Directory Argument
+
+When a directory path is provided, the script confirms that the argument is a directory.  
+It uses the `find` command to count the total number of files and the number of `.txt` files present in the directory.
+
+---
+
+### Step 4: Execute Script with Invalid Number of Arguments
+
+If the script is executed without any arguments or with more than one argument, it checks the argument count.  
+Since the requirement is exactly one argument, the script displays an appropriate error message and terminates.
+
+---
+
+### Step 5: Execute Script with a Non-Existing Path
+
+Before performing any operation, the script checks whether the given path exists.  
+If the path does not exist, the script displays an error message and stops execution to prevent incorrect processing.
+
+
